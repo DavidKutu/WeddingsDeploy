@@ -1,0 +1,644 @@
+:root {
+  --main-color: #142e4c;
+  --sec-color: #d28a55;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.AppWidth {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.sectionHeight {
+  height: fit-content;
+  padding-top: 70px;
+}
+
+.sectionRelative {
+  position: relative;
+}
+
+/* #region modal */
+.centerIconModal {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.iconModal {
+  font-size: 2em !important;
+  color: gray;
+}
+
+.iconModal:hover {
+  cursor: pointer;
+}
+
+.imgModal {
+  max-width: 100%;
+}
+
+@media (max-width: 858px) {
+  .closeIconModal {
+    text-align: right;
+  }
+
+  .nextIconModal {
+    position: absolute;
+    width: auto;
+    left: 90%;
+    top: 55%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .prevIconModal {
+    position: absolute;
+    width: auto;
+    left: 4%;
+    top: 55%;
+    padding-left: 0px;
+    padding-right: 0px;
+    z-index: 2000;
+  }
+}
+/* #endregion */
+
+/* #region Menu*/
+.Menu {
+  background-color: var(--main-color);
+  padding-top: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 10px;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 1999;
+  border-top: solid 4px var(--sec-color);
+  border-bottom: solid 4px var(--sec-color);
+}
+
+.menuButtons {
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-button {
+  border: none;
+  background-color: inherit;
+  margin-right: 10px;
+  color: white;
+}
+
+.menu-button:hover {
+  color: var(--sec-color);
+  transition: .5s;
+}
+
+.checkbtn {
+  display: none;
+  float: right;
+}
+
+#menuCheck {
+  opacity: 0;
+  position: absolute;
+  right: 29px;
+  top: 23px;
+  transform: scale(2, 2);
+}
+
+.logo {
+  height: 50px;
+  width: 155px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 858px) {
+  .Menu {
+    padding-right: 23px;
+  }
+
+  .menuButtons {
+    display: block;
+    height: auto;
+    min-width: 250px;
+    background: var(--main-color);
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    transition: all .5s;
+  }
+  
+  .menu-button {
+    display: block;
+    margin: 40px auto;
+    line-height: 30px;
+    color: white;
+  }
+  
+  .menu-button:hover {
+    background: none;
+    color: var(--sec-color);
+    text-decoration: underline;
+  }
+
+  .checkbtn {
+    display: block;
+    font-size: 30px;
+    margin-top: 5px;
+    color: white;
+  }
+
+  #menuCheck:checked ~ .menuButtons {
+    right: 0px;
+  }
+}
+/* #endregion */
+
+/* #region Home Section 1 */
+.background1 {
+  background-image: url(../../images/liliaBeto1.jpg);
+  background-position: center;
+  background-size: cover;
+  /* filter: blur(2px) brightness(0.5); */
+
+  width: 100%;
+  height: 100%;
+}
+
+.font {
+  font-family: 'Prata',Georgia,"Times New Roman",serif;
+  color: white;
+
+  position: absolute;
+  z-index: 1990;
+}
+
+.text1 {
+  font-weight: 900;
+  font-size: 4em;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 6px black;
+  color: var(--sec-color);
+
+  top: 70%;
+  left: 50%;
+  translate: -50% -50%;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.subtext1 {
+  font-size: 2em;
+  text-align: center;
+
+  top: 80%;
+  left: 50%;
+  translate: -50% -50%;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.buttonGoToContact1 {
+  color: white;
+  border: 1px solid white;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttonGoToContact1:hover {
+  background-color: white;
+}
+
+.buttonGoToContact2 {
+  color: #2a2b78;
+  border: 2px solid #2a2b78;
+  font-weight: 500;
+  margin-left: 5%;
+}
+
+.buttonGoToContact2:hover {
+  background-color: #2a2b78;
+  color: white;
+}
+
+.buttonGoToServices {
+  color: #2a2b78;
+  border: 2px solid #2a2b78;
+  font-weight: 500;
+
+  display: block;
+  margin: auto;
+}
+
+.buttonGoToServices:hover {
+  background-color: #2a2b78;
+  color: white;
+}
+@media (max-width: 858px) {
+  .text1 {
+    font-size: 2em;
+  }
+
+  .subtext1 {
+    font-size: 1em;
+  }
+}
+/* #endregion */
+
+/* #region Home Section 2 */
+.backgroundColor2 {
+  background-color: #f7f7f7;
+}
+
+.title2 {
+  text-align: center;
+  color: var(--sec-color);
+  font-family: 'Prata',Georgia,"Times New Roman",serif;
+  font-size: 2em;
+  line-height: 1.6em;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.background2 {
+  background-image: url(../../images/texture-bg.jpg);
+}
+
+.row2 {
+  height: 80%;
+}
+
+.imageBorder2 {
+  display: flex;
+  margin: 5% 0% 10% 0%;
+  box-shadow: 0px 15px 60px 0px rgb(29 61 71 / 20%);
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.innerImage {
+  max-width: 100%;
+  border: 4px solid var(--sec-color);
+}
+
+.text2 {
+  padding: 10% 5% 10% 5%;
+  font-size: 16px;
+  line-height: 2;
+  text-align: center;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+@media (max-width: 858px) {
+  .title2 {
+    font-size: 1.4em;
+  }
+  
+  .row2 {
+    height: 30%;
+  }
+
+  .imageBorder2 {
+    margin: 5% 0% 5% 0%;
+  }
+  
+  .text2 {
+    padding: 0% 5% 0% 5%;
+    font-size: 14px;
+  }
+}
+/* #endregion */
+
+/* #region Home Section 3 */
+.background3 {
+  background-image: url(../../images/countdown.jpg);
+  background-position: center;
+  background-size: cover;
+
+  width: 100%;
+  height: 100%;
+}
+
+.text3 {
+  font-weight: 900;
+  font-size: 4em;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 6px black;
+  color: var(--sec-color);
+
+  top: 10%;
+  left: 50%;
+  translate: -50% -50%;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.subtext3 {
+  font-size: 2em;
+  text-align: center;
+  color: var(--main-color);
+
+  top: 20%;
+  left: 50%;
+  translate: -50% -50%;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.countdown3 {
+  top: 40%;
+  left: 50%;
+  translate: -50% -50%;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.counterList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.counterListItem {
+  width: 160px;
+  margin: 0 20px;
+  padding: 38px 10px;
+  text-align: center;
+}
+
+.counterListItem span {
+  font-size: 35px;
+  color: var(--sec-color)
+}
+
+.counterListItem p {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--sec-color)
+}
+
+.counterListItemBg1 {
+  background: rgba(21,47,76,0.6) !important;
+}
+
+.counterListItemBg2 {
+  background: rgba(123,32,58,0.6) !important;
+}
+
+@media (max-width: 858px) {
+  .text3 {
+    font-weight: 400;
+    font-size: 2em;
+    text-wrap: nowrap;
+  
+    top: 5%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  
+  .subtext3 {
+    font-size: 1.5em;
+    text-wrap: nowrap;
+  
+    top: 10%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+  
+  .countdown3 {
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  .counterList {
+    display: block;
+    padding: unset;
+  }
+
+  .counterListItem {
+    margin: 20 20px;
+    padding: 25px 10px;
+  }
+}
+/* #endregion */
+
+/* #region Home Section 4 */
+.text4 {
+  color: var(--sec-color);
+  font-weight: 500;
+  font-size: 1.5em;
+  font-family: 'Prata',Georgia,"Times New Roman",serif;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.subtext4 {
+  line-height: 2em;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.bold4 {
+  font-weight: 500;
+}
+
+.link4 {
+  font-weight: 500;
+  color: var(--sec-color);
+  font-style: italic;
+}
+
+.centerIcon4 {
+  text-align: center;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.icon4 {
+  font-size: 4em !important;
+  color: var(--sec-color);
+}
+
+@media (max-width: 858px) {
+  .text4 {
+    font-size: 1em;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .subtext4 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+/* #endregion */
+
+/* #region Home Agregar a Calendario */
+.buttonCalendar {
+  background-color: var(--sec-color);
+  color: white;
+  padding: 5%;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.buttonCalendar:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.buttonTextCalendar {
+  text-align: center;
+  color: #a4a4a4;
+  padding-top: 5%;
+  animation: 1s ease-out 0s fadeIn;
+}
+/* #endregion */
+
+/* #region codigo de vestimenta */
+.titleVestimenta {
+  text-align: center;
+  color: var(--sec-color);
+  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-size: 2em;
+  line-height: 1.6em;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.subtitleVestimenta {
+  text-align: center;
+  color: var(--main-color);
+  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  letter-spacing: 3px;
+  font-size: x-large;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.imageSectionVestimenta {
+  background-color: white;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.imageVestimenta {
+  max-width: 100%;
+}
+
+.textVestimenta {
+  text-align: center;
+  color: var(--sec-color);
+  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-size: 1.3em;
+  line-height: 1.6em;
+  margin-bottom: auto;
+}
+
+.text2Vestimenta {
+  text-align: center;
+  color: gray;
+  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin-bottom: auto;
+  padding-bottom: 20px;
+}
+/* #endregion */
+
+/* #region fotos */
+.backgroundColor3 {
+  background-color: var(--main-color);
+}
+
+.titleFotos {
+  text-align: center;
+  color: var(--sec-color);
+  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-size: 2em;
+  line-height: 1.6em;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.centerIconFotos {
+  text-align: center;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.iconFotos {
+  font-size: 4em !important;
+  color: var(--sec-color);
+}
+
+.imageFotos {
+  max-width: 100%;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.imageFotos:hover {
+  cursor: pointer;
+  box-shadow: 0px 15px 60px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 858px) {
+  .imageFotos {
+    margin-bottom: 20px;
+  }
+}
+/* #endregion */
+
+/* #region MesaDeRegalos */
+.backgroundColor4 {
+  background-color: var(--sec-color);
+}
+
+.titleMesa {
+  text-align: center;
+  color: white;
+  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-size: 2em;
+  line-height: 1.6em;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.centerIconMesa {
+  text-align: center;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.iconMesa {
+  font-size: 4em !important;
+  color: white;
+}
+
+.imageMesa {
+  max-width: 70%;
+  display: block;
+  margin: auto;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.linkMesa {
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  animation: 1s ease-out 0s fadeIn;
+}
+
+.linkMesa:hover {
+  color: white;
+}
+/* #endregion */
