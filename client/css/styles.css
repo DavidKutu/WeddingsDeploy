@@ -175,7 +175,7 @@
 
 /* #region Home Section 1 */
 .background1 {
-  background-image: url(../../images/liliaBeto1.jpg);
+  background-image: url(../../images/liliaBeto1.JPG);
   background-position: center;
   background-size: cover;
   /* filter: blur(2px) brightness(0.5); */
@@ -279,7 +279,7 @@
 }
 
 .background2 {
-  background-image: url(../../images/texture-bg.jpg);
+  background-image: url(../../images/texture-bg.JPG);
 }
 
 .row2 {
@@ -328,7 +328,7 @@
 
 /* #region Home Section 3 */
 .background3 {
-  background-image: url(../../images/countdown.jpg);
+  background-image: url(../../images/countdown.JPG);
   background-position: center;
   background-size: cover;
 
