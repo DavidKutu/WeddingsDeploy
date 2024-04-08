@@ -429,6 +429,7 @@
   .counterList {
     display: block;
     padding: unset;
+    padding-top: 30%;
   }
 
   .counterListItem {
