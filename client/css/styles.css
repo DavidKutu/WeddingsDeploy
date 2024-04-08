@@ -429,12 +429,12 @@
   .counterList {
     display: block;
     padding: unset;
-    padding-top: 30%;
+    padding-top: 40%;
   }
 
   .counterListItem {
-    margin: 20 20px;
-    padding: 25px 10px;
+    margin: 10px 20px;
+    padding: 20px 10px;
   }
 }
 /* #endregion */
