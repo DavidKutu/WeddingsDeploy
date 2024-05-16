@@ -1,6 +1,9 @@
 :root {
   --main-color: #142e4c;
+  --main-color-dark: #000c1b;
   --sec-color: #d28a55;
+  --font: 'Prata', Georgia, "Times New Roman", serif;
+  --font2: 'Poppins', sans-serif;
 }
 
 @keyframes fadeIn {
@@ -12,6 +15,10 @@
     opacity: 1;
     transform: scale(1);
   }
+}
+
+.fixOverflow {
+  overflow: hidden;
 }
 
 .AppWidth {
@@ -27,6 +34,29 @@
 .sectionRelative {
   position: relative;
 }
+
+.animate {
+  animation: 1s ease-out 0s fadeIn;
+}
+
+/* #region scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #9d9d9d;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7e7e7e;
+}
+/* #endregion */
 
 /* #region modal */
 .centerIconModal {
@@ -48,6 +78,53 @@
 
 .imgModal {
   max-width: 100%;
+}
+
+.modalConfCard {
+  background-color: var(--main-color);
+  border: 4px solid var(--sec-color);
+  padding: 20px;
+}
+
+.modalInputWidth {
+  width: 20%;
+  margin-right: 20px;
+}
+
+.modalFixBottom {
+  position: relative;
+  bottom: 0px;
+  z-index: 1030;
+  display: block;
+}
+
+.modalFixBottom button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.modalRight {
+  float: right;
+}
+
+.thanksForConfirmingModal {
+  background-color: white;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.thanksForConfirmingCheckmark {
+  text-align: center;
+  font-size: xxx-large;
+  color: green;
+}
+
+.modalCenter {
+  text-align: center;
+}
+
+.modalFont {
+  font-family: var(--font);
 }
 
 @media (max-width: 858px) {
@@ -173,19 +250,39 @@
 }
 /* #endregion */
 
-/* #region Home Section 1 */
-.background1 {
-  background-image: url(../../images/liliaBeto1.JPG);
+/* #region Section 1: nos casamos */
+.section1Background {
   background-position: center;
   background-size: cover;
-  /* filter: blur(2px) brightness(0.5); */
+  display: inline-block;
 
   width: 100%;
   height: 100%;
 }
 
-.font {
-  font-family: 'Prata',Georgia,"Times New Roman",serif;
+.img1 {
+  background-image: url(../../images/liliaBeto1.JPG);
+}
+
+.img2 {
+  background-image: url(../../images/countdown.JPG);
+}
+
+.img3 {
+  background-image: url(../../images/gallery/gallery-1.JPEG);
+}
+
+.img4 {
+  background-image: url(../../images/gallery/gallery-2.JPEG);
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.absoluteText {
+  font-family: var(--font);
   color: white;
 
   position: absolute;
@@ -203,7 +300,6 @@
   top: 70%;
   left: 50%;
   translate: -50% -50%;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .subtext1 {
@@ -213,46 +309,8 @@
   top: 80%;
   left: 50%;
   translate: -50% -50%;
-  animation: 1s ease-out 0s fadeIn;
 }
 
-.buttonGoToContact1 {
-  color: white;
-  border: 1px solid white;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.buttonGoToContact1:hover {
-  background-color: white;
-}
-
-.buttonGoToContact2 {
-  color: #2a2b78;
-  border: 2px solid #2a2b78;
-  font-weight: 500;
-  margin-left: 5%;
-}
-
-.buttonGoToContact2:hover {
-  background-color: #2a2b78;
-  color: white;
-}
-
-.buttonGoToServices {
-  color: #2a2b78;
-  border: 2px solid #2a2b78;
-  font-weight: 500;
-
-  display: block;
-  margin: auto;
-}
-
-.buttonGoToServices:hover {
-  background-color: #2a2b78;
-  color: white;
-}
 @media (max-width: 858px) {
   .text1 {
     font-size: 2em;
@@ -264,7 +322,7 @@
 }
 /* #endregion */
 
-/* #region Home Section 2 */
+/* #region Section 2: nuestra historia */
 .backgroundColor2 {
   background-color: #f7f7f7;
 }
@@ -272,10 +330,9 @@
 .title2 {
   text-align: center;
   color: var(--sec-color);
-  font-family: 'Prata',Georgia,"Times New Roman",serif;
+  font-family: var(--font);
   font-size: 2em;
   line-height: 1.6em;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .background2 {
@@ -290,7 +347,6 @@
   display: flex;
   margin: 5% 0% 10% 0%;
   box-shadow: 0px 15px 60px 0px rgb(29 61 71 / 20%);
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .innerImage {
@@ -303,7 +359,6 @@
   font-size: 16px;
   line-height: 2;
   text-align: center;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 @media (max-width: 858px) {
@@ -326,7 +381,7 @@
 }
 /* #endregion */
 
-/* #region Home Section 3 */
+/* #region Section 3: Countdown */
 .background3 {
   background-image: url(../../images/countdown.JPG);
   background-position: center;
@@ -347,7 +402,6 @@
   top: 10%;
   left: 50%;
   translate: -50% -50%;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .subtext3 {
@@ -358,14 +412,12 @@
   top: 20%;
   left: 50%;
   translate: -50% -50%;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .countdown3 {
   top: 40%;
   left: 50%;
   translate: -50% -50%;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .counterList {
@@ -439,18 +491,16 @@
 }
 /* #endregion */
 
-/* #region Home Section 4 */
+/* #region Section 4: Agenda */
 .text4 {
   color: var(--sec-color);
   font-weight: 500;
   font-size: 1.5em;
-  font-family: 'Prata',Georgia,"Times New Roman",serif;
-  animation: 1s ease-out 0s fadeIn;
+  font-family: var(--font);
 }
 
 .subtext4 {
   line-height: 2em;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .bold4 {
@@ -465,7 +515,6 @@
 
 .centerIcon4 {
   text-align: center;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .icon4 {
@@ -495,7 +544,6 @@
   text-transform: uppercase;
   text-align: center;
   display: block;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .buttonCalendar:hover {
@@ -507,7 +555,6 @@
   text-align: center;
   color: #a4a4a4;
   padding-top: 5%;
-  animation: 1s ease-out 0s fadeIn;
 }
 /* #endregion */
 
@@ -515,24 +562,21 @@
 .titleVestimenta {
   text-align: center;
   color: var(--sec-color);
-  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-family: var(--font);
   font-size: 2em;
   line-height: 1.6em;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .subtitleVestimenta {
   text-align: center;
   color: var(--main-color);
-  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-family: var(--font);
   letter-spacing: 3px;
   font-size: x-large;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .imageSectionVestimenta {
   background-color: white;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .imageVestimenta {
@@ -542,7 +586,7 @@
 .textVestimenta {
   text-align: center;
   color: var(--sec-color);
-  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-family: var(--font);
   font-size: 1.3em;
   line-height: 1.6em;
   margin-bottom: auto;
@@ -551,7 +595,7 @@
 .text2Vestimenta {
   text-align: center;
   color: gray;
-  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-family: var(--font);
   font-size: 1.1em;
   line-height: 1.6em;
   margin-bottom: auto;
@@ -567,15 +611,13 @@
 .titleFotos {
   text-align: center;
   color: var(--sec-color);
-  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-family: var(--font);
   font-size: 2em;
   line-height: 1.6em;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .centerIconFotos {
   text-align: center;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .iconFotos {
@@ -583,9 +625,12 @@
   color: var(--sec-color);
 }
 
+.rowMargin {
+  margin-bottom: 15px;
+}
+
 .imageFotos {
   max-width: 100%;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .imageFotos:hover {
@@ -608,15 +653,13 @@
 .titleMesa {
   text-align: center;
   color: white;
-  font-family: 'Prata', Georgia, "Times New Roman", serif;
+  font-family: var(--font);
   font-size: 2em;
   line-height: 1.6em;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .centerIconMesa {
   text-align: center;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .iconMesa {
@@ -628,18 +671,258 @@
   max-width: 70%;
   display: block;
   margin: auto;
-  animation: 1s ease-out 0s fadeIn;
 }
 
 .linkMesa {
   color: white;
   text-align: center;
   font-size: x-large;
-  font-family: 'Prata', Georgia, "Times New Roman", serif;
-  animation: 1s ease-out 0s fadeIn;
+  font-family: var(--font);
 }
 
 .linkMesa:hover {
   color: white;
+}
+/* #endregion */
+
+/* #region confirmation */
+.confCard {
+  background-color: var(--main-color);
+  height: 500px;
+  border: 4px solid var(--sec-color);
+  padding: 20px;
+}
+
+.confTitle {
+  color: var(--sec-color);
+  text-align: center;
+  font-family: var(--font);
+  font-size: 2em;
+  line-height: 1.6em;
+}
+
+.confSubtitle {
+  color: white;
+}
+
+.confInput {
+  background: var(--main-color-dark);
+  opacity: 0.4;
+}
+
+.confInput, select, textarea{
+  color: white;
+}
+
+.confButton {
+  background-color: var(--sec-color);
+  color: white;
+  border: 2px solid var(--sec-color);
+}
+
+.confButton:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+
+@media (max-width: 858px) {
+  .confCard {
+    margin: 20px;
+  }
+}
+/* #endregion */
+
+/* #region footer */
+.footerText {
+  color: var(--sec-color);
+  text-align: center;
+  margin: 40px 0px;
+  font-family: var(--font);
+  font-size: x-large;
+}
+
+.footerText2 {
+  color: var(--sec-color);
+  margin: 0px 20px 30px 20px;
+  font-family: var(--font);
+  font-size: large;
+}
+
+.footerExtraText {
+  color: white;
+  margin: 0px 20px 30px 20px;
+  font-size: medium;
+}
+/* #endregion */
+
+/* #region por que la ciudad */
+.whycitytext {
+  color: var(--sec-color);
+  text-align: center;
+  /* margin: 40px 0px; */
+  font-family: var(--font);
+  font-size: x-large;
+}
+
+.whycitytext2 {
+  color: white;
+  text-align: center;
+  font-family: var(--font2);
+  font-size: medium;
+}
+
+.centerIconwhycity {
+  text-align: center;
+}
+
+.iconwhycity {
+  font-size: 4em !important;
+  color: var(--sec-color);
+}
+/* #endregion */
+
+/* #region hotel */
+.imageHotel {
+  max-width: 100%;
+}
+
+.hotelText {
+  text-align: center;
+  font-family: var(--font2);
+  font-size: medium;
+}
+
+.hotelBold {
+  font-weight: 600;
+}
+
+.buttonHotel {
+  background-color: var(--sec-color);
+  color: white;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.buttonHotel:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+/* #endregion */
+
+/* #region tourism */
+.imageTourismContainer {
+  overflow: hidden;
+  height: 300px;
+}
+
+.imageTourism {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+  object-position: center 70%;
+}
+
+.textTourism {
+  color: var(--sec-color);
+  font-family: var(--font);
+  font-size: larger;
+  text-align: end;
+}
+
+@media (max-width: 858px) {
+  .textTourism {
+    text-align: center;
+  }
+
+  .linkTourism {
+    display: table;
+    margin: auto;
+  }
+}
+/* #endregion */
+
+/* #region Directory */
+.iconDirectory {
+  font-size: 1em !important;
+}
+
+.centerIconDirectory {
+  text-align: center;
+}
+
+.centerIconDirectory:hover {
+  cursor: pointer;
+}
+
+.directoryText {
+  color: var(--sec-color);
+  text-align: center;
+  font-family: var(--font);
+  font-size: x-large;
+}
+
+.directoryText:hover {
+  cursor: pointer;
+}
+
+.directoryTableRow {
+  margin: 10px 10px;
+  font-family: var(--font2);
+}
+
+.directoryTableRow2 {
+  margin-bottom: 10px;
+}
+
+.directoryTableHead {
+  text-align: end;
+  color: var(--sec-color);
+  font-weight: 600;
+}
+
+.directoryBold {
+  font-weight: 600;
+}
+
+@media (max-width: 858px) {
+  .directoryTableHead {
+    text-align: center;
+  }
+}
+/* #endregion */
+
+/* #region Instagram */
+.instagramText {
+  text-align: center;
+  color: white;
+  font-size: x-large;
+  font-family: var(--font);
+}
+
+.instagramHashtag {
+  text-align: center;
+  color: var(--sec-color);
+  font-size: xx-large;
+  font-family: var(--font);
+}
+
+.buttonInstagram {
+  background-color: var(--sec-color);
+  color: white;
+  text-align: center;
+  display: block;
+  max-width: fit-content;
+  margin: auto;
+  padding: 12px;
+}
+
+.buttonInstagram:hover {
+  color: white;
+}
+
+.iconInstagram {
+  font-size: 2em !important;
+  vertical-align: middle;
 }
 /* #endregion */
